@@ -1,0 +1,163 @@
+pet-adoption-center/
+├── app.js
+├── package.json
+├── public/
+│   ├── css
+│   │   └── styles.css
+│   ├── js
+│   │   └── public.js
+│   ├── images/
+│   │   └── dog1.jpg
+├── views/
+│   └── index.ejs
+|   └── about.ejs
+│   └── admin.ejs
+│   └── contactus.ejs
+│   └── services.ejs
+├── routes/
+│   └── admin.js
+│   └── auth.js
+├── node_modules/
+├── app.js
+├── database.js
+├── furry_friends.js
+
+ <!-- Pet Card Section -->   
+  <section class="mt-3 mb-3">
+
+    <!-- Pet Categories -->
+    <!-- Cat Cards -->
+    
+    <h1 class="fw-normal m-4">Cat Pets :</h1>
+    
+    <div class="container gap-lg-3 gap-xxl-2 gap-3 d-flex scrollable-row c1">
+ 
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Balinese.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Fluffy</h3>
+            <p class="card-text">Age: 2 years<br>Breed: Balinese<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Bombay.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Buddy</h3>
+            <p class="card-text">Age: 3 years<br>Breed: Bombay<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div> 
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Egyptian Mau.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Mike</h3>
+            <p class="card-text">Age: 1 year<br>Breed: Egyptian Mau<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Chausie.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Buru</h3>
+            <p class="card-text">Age: 2 years<br>Breed: Balinese<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/cat/profile/Abyssinian.jpg" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Fuss</h3>
+            <p class="card-text">Age: 2 years<br>Breed: Abyssinian<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pet Categories -->
+    <!-- Dog Cards -->
+    <h1 class="fw-normal m-4">Dog Pets :</h1>
+
+    <div class="container gap-lg-3 gap-xxl-2 gap-3 d-flex scrollable-row c1">
+ 
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="/images/dog/profile/Canaan Dog.webp" class="card-img-top" alt="cat">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Obito</h3>
+            <p class="card-text">Age: 2 years<br>Breed: Canaan<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/dog/profile/Chihuahua.jpg" class="card-img-top" alt="dog">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Thumper</h3>
+            <p class="card-text">Age: 1 year<br>Breed: Holland Lop<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>  
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/dog/profile/Golden_retriver.jpg" class="card-img-top" alt="dog">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Buddy</h3>
+            <p class="card-text">Age: 3 years<br>Breed: Golden Retriever<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/dog/profile/Alaskan Malamute.webp" class="card-img-top" alt="dog">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Mae</h3>
+            <p class="card-text">Age: 1 year<br>Breed: Alaskan Malamute<br>Gender: Female</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card mb-4">
+          <img src="images/dog/profile/Belgian Shepherd.jpg" class="card-img-top" alt="dog">
+          <div class="card-body text-center">
+            <h3 class="card-title fs-2">Marlon</h3>
+            <p class="card-text">Age: 1 year<br>Breed: Belgian Shepherd<br>Gender: Male</p>
+            <a href="#" class="btn btn-primary">Adopt Me</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+
+  
+    <!-- <script>
+      document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordInput = document.getElementById('Login_pass');
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+      });
+    </script> -->

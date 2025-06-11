@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeaea !important;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+.custom-card-size {
+  width: 20rem;
+  height: 26rem;
+}
+
+.icon-large {
+  font-size: 8rem;
+}
+
+.scroll-section {
+  scroll-behavior: smooth;
+}
+
+.custom-rounded {
+  border-radius: 5rem;
+}
+
+.uniform-img {
+  height: 300px; /* or any size */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .custom-card-size {
+    width: 100%;
+    height: auto;
+  }
+  
+  .icon-large {
+    font-size: 5rem;
+  }
+  
+  .uniform-img {
+    height: 200px; /* Adjust for smaller screens */
+  }
+}

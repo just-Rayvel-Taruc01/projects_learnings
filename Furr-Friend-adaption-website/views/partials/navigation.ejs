@@ -1,0 +1,262 @@
+    <nav
+      class="navbar navbar-expand-sm navbar-light bg-light p-1"
+    >
+      <a class="navbar-brand d-flex align-items-center mx-3" href="/">
+        <img src="/images/petadaptation_Icon.ico" alt="Logo" width="48" height="48" class="me-2" />
+        <span class="fw-bold fs-3">Furr Friend</span>
+      </a>
+
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse col-8 justify-content-end " id="collapsibleNavId">
+          <ul class="navbar-nav gap-lg-3 text-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about_Us">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contactus">Contact</a>
+            </li>
+            <!-- LogIn and SignUp Button -->
+            <div class="nav-item px-lg-3 gap-2 d-flex text justify-content-center">
+              
+              <!-- Login Modal trigger button -->
+              <button
+                type="button"
+                class="btn btn-primary rounded-4"
+                data-bs-toggle="modal"
+                data-bs-target="#LogIn_modalId"
+              >
+              Log In
+              </button>
+              
+              <!-- Login Modal Body --> 
+              <div
+                class="modal fade"
+                id="LogIn_modalId"
+                tabindex="-1"
+                 
+                role="dialog"
+                aria-labelledby="modalTitleId"
+                aria-hidden="true"
+              >
+                <div
+                  class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+                  role="document"
+                >
+                <!-- Login form -->
+                <form id="Login_Form" action="/login" method="post">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="Login_modalTitleId">
+                        Log In
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close rounded-5"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body ">
+                      <h3 class="m-3">Furr Friends</h3>
+                      <!-- Form Inputs -->
+                      <!-- input email --> 
+                      <div class="mx-md-5 px-md-5">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="Email"
+                            id="Login_Email"
+                            placeholder=""
+                            required
+                          />
+                          <label for="Email_formId1">Email Address</label>
+                        </div>
+                        <!-- LogIn Password -->
+                        <div class="form-floating mt-4">
+                          <div class="input-group">
+                            <div class="form-floating"> 
+
+                              <input
+                                type="password"
+                                class="form-control"
+                                name="Login_Password"
+                                id="Login_pass"
+                                placeholder=""
+                                required
+                              />
+                              <label for="Login_pass">Password</label>
+                            </div>
+                            <div class="input-group-append d-flex flex-wrap">
+                              <button type="button" class="btn btn-outline-secondary " id="togglePassword">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div> 
+                        </div> 
+                      </div>
+                      <div class="d-flex flex-column m-3">
+                        <a class="text-decoration-none" href="#">Forgot Password?</a>
+                        <a class="text-decoration-none" href="#">Do you not have an account?</a>
+                      </div> 
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="submit" value="Submit" class="btn btn-primary" id="Login_Submit">Log In</button>
+                    
+                    </div>
+
+                  </div>
+                </form> 
+                </div>
+              </div>
+              
+              <!-- Register Modal trigger button -->
+              <button
+                type="button"
+                class="btn btn-primary rounded-4"
+                data-bs-toggle="modal"
+                data-bs-target="#Reg_modalId"
+              >
+                Register
+              </button>
+              
+              <!--Register Modal Body -->
+              <div
+                class="modal fade"
+                id="Reg_modalId"
+                tabindex="-1"
+                 
+                role="dialog"
+                aria-labelledby="modalTitleId"
+                aria-hidden="true"
+              >
+                <div
+                  class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+                  role="document"
+                >
+                <!-- Register Form -->
+                <form action="/register" id="Register_Form" method="post">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalTitleId">
+                        Register
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close rounded-5"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <h3 class="m-3">Furr Friends</h3>
+                      <!-- Form Inputs -->
+                      <!-- Username -->
+                      <div class="mx-md-3 px-md-3">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="Name"
+                            id="Username"
+                            placeholder=""
+                            required
+                          />
+                          <label for="Username">Username</label>
+                        </div>
+                        <!-- input email --> 
+                        <div class="form-floating mb-3">
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="Email"
+                            id="email"
+                            placeholder=""
+                            required
+                          />
+                          <label for="email">Email Address</label>
+                        </div>
+                        <!-- Register Password -->
+                        <div class="form-floating mb-3">
+                          
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="Password"
+                            id="password"
+                            placeholder=""
+                            required
+                          />
+                          <label for="password">Password</label>
+                        </div>
+                        <!-- Confirm Password -->
+                        <div class="form-floating mb-3">
+                          
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="Comfirmpass_formId1"
+                            id="ComfirmPassword"
+                            placeholder=""
+                            required
+                          />
+                          <label for="ComfirmPassword">Confirm Password</label>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-center">
+                        
+                        <div class="col-md-5 ">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value=""  id="TermCon_checkbox" />
+                            <label class="form-check-label" for="TermCon_checkbox"> Do you agree on Terms and Conditions</label>
+                          </div>
+                        </div>  
+
+                      </div> 
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="submit" id="Register_Submit" class="btn btn-primary">Register</button>
+                    </div>
+                  </div>
+                </form>
+                  
+                </div>
+              </div>
+           
+            </div>
+             
+          </ul>
+        </div>
+      </div>
+    </nav>

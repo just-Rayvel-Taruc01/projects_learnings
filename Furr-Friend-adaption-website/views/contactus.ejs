@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/images/petadaptation_Icon.ico" type="icon/png">
+  
+  <title>Contact Us | Furr Freind</title>
+
+  <style>
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /*Carousel start*/
+
+      @media screen and (max-width: 500px) {
+          .flex-container {
+              flex-direction: column; 
+              align-items: center;
+              text-align: center;  
+          }
+      }
+
+      @media (max-width: 767px) {
+      .location-container {
+        flex-direction: column;
+      }
+
+      .map {
+        max-width: 100%;
+      }
+
+      .info-container {
+        padding: 20px 0;
+      }
+    }
+
+    /* Custom sizing on small screens aguy*/
+    @media screen and (max-width: 500px){
+          .input-size {
+              width: 100%!important; 
+          }
+      }
+
+  </style>
+ 
+</head>
+<body>
+  <header>
+    <!-- Navigation Bar starts --> 
+      <%- include ("partials/navigation") %>
+  </header>
+<!-- Main Content Start -->
+
+<main>
+  <!--Location Section-->
+  <section class="pb-1" style="background-color: #f4f4f4;">
+    <!-- Search bar -->
+      <%- include ("partials/searchbar") %>
+
+    <div class="mt-2 mb-4 container ">
+      <p class="h1 fw-normal p-3 ">Furr Friend Location</p>
+  
+      <div class="px-md-5 py-md-3 py-sm-0 bg-white shadow rounded overflow-hidden">
+          <div class="d-lg-flex justify-content-center location-container p-4 p-sm-0">
+            
+              <iframe class="col-lg-8 col-md-12 map" width="600" height="450" frameborder="" style="border: 0;" allowfullscreen=""
+                  title="DHVSU Candaba Campus Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3530.470513066773!2d120.7994229!3d15.0935453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMTXCsDEzJzIzLjAiTiAxMjDCsDU5JzAwLjIgUzExwrAxMCcwNS41Ilc!5e0!3m2!1sen!2sus!4v1658888888888!5m2!1sen!2sus">
+              </iframe>
+  
+              <div class="col-lg-4 col-md-12 info-container flex-md-grow-1 d-flex flex-column justify-content-center mx-4">
+                  <h3 class="py-1">Address:</h3>
+                  <p class="text-secondary fs-4">Pansol, Pasig Candaba Pampanga</p>
+                  <h3 class="py-1">Phone Number:</h3>
+                  <p class="text-secondary fs-4">(+63)978-752-5252</p>
+                  <h3 class="py-1">Email Address:</h3>
+                  <p class="text-black-50"><a class="text-decoration-none fs-4" href="#">furrfriend@yahoo.com</a></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+    
+    </div>
+
+  </section>
+
+  <!-- Contact Form -->
+  <section class="mb-5">
+    <div class="container py-4">
+        <div class="row d-flex">
+          <div class="col-md-12 col-lg-6">
+              <h1 class="text-dark pt-3 display-one">Get In Touch</h1>
+              <p class="lead text-secondary">
+                  Have questions about adopting, volunteering, or donating? We're here to help! 
+                  Reach out to us anytime—our team is happy to provide more information about our pets, 
+                  the adoption process, or how you can support our mission to give every animal a loving home.
+              </p>
+          </div>
+            <form class="m-sm-3 col-md-12  card card-body col-lg-5" action="">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                  <textarea  class="form-control " id="exampleFormControlTextarea1" rows="9"></textarea>
+                  <input class="btn btn-primary mt-2" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+  </section>
+
+</main>
+<!-- Main Content End -->
+<!-- Footer -->
+    <%- include ("partials/footer") %>
+
+    <script src="/jquery/jquery.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

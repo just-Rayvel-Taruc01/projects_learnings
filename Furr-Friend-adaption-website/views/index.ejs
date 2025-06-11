@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/images/petadaptation_Icon.ico" type="icon/png">
+  <!-- FontAwesome 6.2.0 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <title>Home | Furr Friend</title>
+
+</head>
+<body>
+  <!-- Navigation Bar starts --> 
+  <header>
+  
+    <%- include ("partials/navigation") %>
+
+  </header> 
+  <!-- Navbar ends -->
+
+<!-- Main Content Start -->
+<main>
+  
+  <!-- Landing Page -->
+  <section class="" style="background-image: url('images/pexels-christian-domingues-731022.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <!-- Search bar -->
+    <%- include ("partials/searchbar") %>  
+    <div class="jumbotron jumbotron-fluid p-5" style="height: 30rem;">
+        <div class="container text-center">
+          <h1 class="display-3">Adopt your furry friends</h1>
+          <p class="lead">We are here to help you find the perfect pet for your family.</p>
+          <hr class="my-2">
+          <p>More info</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Explore</a>
+          </p>
+        </div>
+      </div>
+  </section>
+  
+  <!-- Categories Section -->
+  <section class="">
+    <div class="container">
+      <h2 class="mt-4 badge bg-primary fs-4">Explore Our Categories</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <div class="card-body">
+              <img src="/images/cat/cat.jpg" class="img-fluid mb-3 uniform-img" alt="Cats">
+              <h5 class="card-title">Cats</h5>
+              <p class="card-text">Find your purr-fect feline companion.</p>
+              <a href="/adoption?species=cat" class="btn btn-outline-primary btn-sm">View Cats</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <div class="card-body">
+              <img src="/images/dog/puppy.jpg" class="img-fluid mb-3 uniform-img" alt="Dog">
+              <h5 class="card-title">Dogs</h5>
+              <p class="card-text">Discover loyal and loving dogs ready for adoption.</p>
+              <a href="/adoption?species=dog" class="btn btn-outline-success btn-sm">View Dogs</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 border-0 shadow-sm text-center">
+            <div class="card-body">
+              <img src="/images/other_animal.jpg" alt="" class="img-fluid">
+              <h5 class="card-title">Other Pets</h5>
+              <p class="card-text">Explore a variety of other pets looking for homes.</p>
+              <a href="/adoption?species=other" class="btn btn-outline-warning btn-sm">View Other Pets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Available Pets Section -->
+  <section class="min-vh-100">
+
+    <div class="container">
+      <h2 class="mb-4 badge bg-primary fs-4">Available Pets for Adoption</h2>
+      <div class="row">
+        <% pets.forEach(pet => { %>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="<%= pet.image_path %>" class="card-img-top" alt="<%= pet.name %>">
+              <div class="card-body">
+                <h5 class="card-title"><%= pet.name %> (<%= pet.species %>)</h5>
+                <p class="card-text"><strong>Age:</strong> <%= pet.age %> | <strong>Gender:</strong> <%= pet.gender %></p>
+                <p class="card-text"><%= pet.description %></p>
+                <a href="#" class="btn btn-primary">Adopt Me</a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+
+
+    </div>
+
+  </section>
+ 
+  <!-- Adaption Process -->
+  <section> 
+    <div class="" style="background: url('images/download.jpg') center center/cover no-repeat;">
+      <div class="container p-3">
+      <div class="row">
+        <div class="col-md-12 text-dark">
+          <h2>Adoption Process</h2>
+          <p>The adoption process is simple and straightforward. Here's what you can expect:</p>
+    
+          <div class="accordion" id="adoptionProcessAccordion">
+            <!-- Step 1: Application -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Step 1: Application
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#adoptionProcessAccordion">
+                <div class="accordion-body">
+                  <!-- Content for Step 1 -->
+                  Submit your adoption application online. We'll review it promptly and contact you.
+                </div>
+              </div>
+            </div>
+    
+            <!-- Step 2: Assessment -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Step 2: Assessment
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#adoptionProcessAccordion">
+                <div class="accordion-body">
+                  <!-- Content for Step 2 -->
+                  Our team will assess your application and conduct a virtual or in-person meeting with you.
+                </div>
+              </div>
+            </div>
+    
+            <!-- Step 3: Meet the Pet -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Step 3: Meet the Pet
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#adoptionProcessAccordion">
+                <div class="accordion-body">
+                  <!-- Content for Step 3 -->
+                  Schedule a visit to meet the pet you're interested in. Spend time getting to know each other.
+                </div>
+              </div>
+            </div>
+    
+            <!-- Step 4: Finalize Adoption -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Step 4: Finalize Adoption
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#adoptionProcessAccordion">
+                <div class="accordion-body">
+                  <!-- Content for Step 4 -->
+                  Complete the adoption paperwork and finalize the process. Welcome your new family member!
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <p class="mt-3 text-end">
+            <a class="btn btn-md btn-primary" href="#" role="button">Start Your Adoption Journey</a>
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    
+
+  </section>
+
+</main>
+<!-- Main Content End -->
+<!-- Footer -->
+  <%- include ("partials/footer") %>
+
+    <!-- Bootstrap JS and Popper.js --> 
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries CDN-->
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Use CSS or JS implementation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+</body>
+</html>
